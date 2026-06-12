@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "deploy": "tsx script.ts",
+    "check": "tsc --noEmit --skipLibCheck --target es2022 --moduleResolution NodeNext --module NodeNext --allowImportingTsExtensions --lib es2022,dom script.ts helpers.ts"
+  },
+  "devDependencies": {
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
