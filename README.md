@@ -28,6 +28,14 @@ npm run deploy
 
 Avoid re-running as it creates duplicate connectors and, if the name collides, extra projects under the team.
 
-### 5. Assign the connection to the project
+### 5. Enable the connection on the project
 
-To turn on auth, visit the **Vercel Dashboard**:
+Enable the connection in two places on the Vercel Dashboard:
+
+**a. Team Settings → Passport** — enable the connection on the project
+- *(Optional)* set a **Default Connector** — auto-assigned to new projects.
+- In the project list, check your project → **Assign Connection** → it flips to **Enabled** → **Save**.
+
+**b. Project → Connect** — bind the connector to the project
+- Open the project's **Connect** tab → add the connector to the project.
+- This binds the connector to *this specific project*, satisfying Connect Gateway's project-ownership check (and preventing the `redirect URI does not exist` error).
